@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\artro\\KrathongScanner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{42D01763-3DA2-0564-F04C-9D9B60C914B4}|Assembly-CSharp.csproj|c:\\users\\artro\\krathongscanner\\assets\\script\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42D01763-3DA2-0564-F04C-9D9B60C914B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\imageloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ImageLoader.cs",
+              "DocumentMoniker": "C:\\Users\\artro\\KrathongScanner\\Assets\\Script\\ImageLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ImageLoader.cs",
+              "ToolTip": "C:\\Users\\artro\\KrathongScanner\\Assets\\Script\\ImageLoader.cs",
+              "RelativeToolTip": "Assets\\Script\\ImageLoader.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAewHEAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T04:30:54.44Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
