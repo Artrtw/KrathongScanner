@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImageLoader
   folderPath: C:\Users\artro\KrathongScanner\Assets\Scanned
+  Countloop: 3
   checkInterval: 2
   spawnCooldown: 12
   queueSpawnCooldown: 30
@@ -498,8 +499,9 @@ GameObject:
   - component: {fileID: 966785213}
   - component: {fileID: 966785215}
   - component: {fileID: 966785216}
+  - component: {fileID: 966785217}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,6 +561,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf728dbff6e84c14c92442690bc6b249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RunInBackground
+--- !u!114 &966785217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966785212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280380389d2b51241900f40054964f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KrathongReceiver
+  scannerIP: 26.251.106.56
+  scannerPort: 5000
+  pollInterval: 2
+  imageLoader: {fileID: 460084913}
 --- !u!1 &1077790047
 GameObject:
   m_ObjectHideFlags: 0
