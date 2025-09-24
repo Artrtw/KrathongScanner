@@ -1,16 +1,20 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using TMPro; // ต้องใช้ TextMeshPro
 
 public class KrathongReceiver : MonoBehaviour
 {
     [Header("Network Settings")]
     [Tooltip("IP address of the Scanner PC")]
     public string scannerIP = "192.168.1.100";
-    
+
+    [Header("UI")]
+    public TMP_InputField ipInputField; // ช่องกรอก IP
+
     [Tooltip("Port the scanner API runs on")]
     public int scannerPort = 5000;
     
@@ -47,7 +51,14 @@ public class KrathongReceiver : MonoBehaviour
             Debug.LogError("KrathongReceiver: ImageLoader folderPath is not set!");
             return;
         }
-        
+        if (ipInputField != null)
+        {
+            // ตั้งค่า default ลงในกล่องกรอก
+            ipInputField.text = scannerIP;
+
+            // ฟัง event เวลา user พิมพ์จบ
+            ipInputField.onEndEdit.AddListener(OnIPChanged);
+        }
         // Ensure the folder exists
         if (!Directory.Exists(imageLoader.folderPath))
         {
@@ -60,7 +71,13 @@ public class KrathongReceiver : MonoBehaviour
         
         StartCoroutine(PollForNewScans());
     }
-    
+
+    void OnIPChanged(string newIP)
+    {
+        scannerIP = newIP;
+        Debug.Log("Scanner IP updated to: " + scannerIP);
+    }
+
     IEnumerator PollForNewScans()
     {
         while (true)

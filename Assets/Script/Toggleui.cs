@@ -2,16 +2,19 @@
 
 public class ToggleSetting : MonoBehaviour
 {
-    public GameObject setting; // ลาก Setting มาวางใน Inspector
+    public GameObject[] settings; // ✅ เก็บได้หลาย GameObject
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (setting != null)
+            foreach (GameObject setting in settings)
             {
-                setting.SetActive(!setting.activeSelf);
-                Debug.Log("Toggle Setting: " + setting.activeSelf);
+                if (setting != null)
+                {
+                    setting.SetActive(!setting.activeSelf);
+                    Debug.Log("Toggle Setting: " + setting.name + " = " + setting.activeSelf);
+                }
             }
         }
     }
